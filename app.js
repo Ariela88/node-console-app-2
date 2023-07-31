@@ -5,21 +5,21 @@ const fs = require("fs");
 // console.log(jsonConverter);
 
 const inputUrl = process.argv[2];
-const splittedInputUrl = inputUrl.split('.');
-const ext = splittedInputUrl[splittedInputUrl.length - 1];
-
-let transformFunction;
-if (ext.toLowerCase().includes('json')) {
-    transformFunction = require('./csv-converter');
-} else if (ext.toLowerCase().includes('csv')){
-    transformFunction = require('./json-converter');
-} else {
-    console.log('non posso convertire i file: ' + ext);
-    process.exit();
-}
-
 
 const outputUrl = process.argv[3];
+
+// let transformFunction;
+// if (ext.toLowerCase().includes('json')) {
+//     transformFunction = require('./csv-converter');
+// } else if (ext.toLowerCase().includes('csv')){
+//     transformFunction = require('./json-converter');
+// } else {
+//     console.log('non posso convertire i file: ' + ext);
+//     process.exit();
+// }
+
+
+
 
 let divider = process.argv[4];
 if (divider === undefined) { //A2)aggiungere un parametro alla applicazione che mi permette di indicare il carattere divisorio
