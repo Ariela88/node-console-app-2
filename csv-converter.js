@@ -7,6 +7,7 @@ function transformFromJsonToCsv(data, divider){
     const keys = Object.keys(dataArray[0]);
     console.log(keys);
 
+
     
 
 }
